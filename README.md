@@ -1,4 +1,4 @@
-<img width="1151" height="631" alt="스크린샷 2026-03-30 140454" src="https://github.com/user-attachments/assets/ac8a7ff4-4014-4b20-81ca-15f38ef3f64e" />
+  <img width="1151" height="631" alt="스크린샷 2026-03-30 140454" src="https://github.com/user-attachments/assets/ac8a7ff4-4014-4b20-81ca-15f38ef3f64e" />
 
 # 🧭 떠나GO (DDUNA-GO)
 > **"당신이 꿈꾸는 여행을 그리다"**  
@@ -7,7 +7,7 @@
 ---
 
 ## 1. 📖 프로젝트 소개 (Introduction)
-**그리GO**는 복잡한 여행 계획을 스마트하게 해결해주는 통합 솔루션입니다. 
+**떠나GO**는 복잡한 여행 계획을 스마트하게 해결해주는 통합 솔루션입니다. 
 단순한 정보 제공을 넘어, 사용자의 현재 위치와 목적지들을 분석하여 최적의 동선을 제안하고, 필요한 여행 상품(숙소, 체험, 교통 등)을 한곳에서 예약할 수 있는 미래형 여행 플랫폼입니다.
 
 ---
