@@ -224,6 +224,36 @@ exports.verifyCode = async (req, res) => {
 };
 
 
+// @desc    Delete user account
+// @route   DELETE /api/auth/delete
+// @access  Private
+exports.deleteAccount = async (req, res) => {
+  try {
+    const userId = req.user.id;
+
+    // 관련 데이터 함께 삭제
+    const Cart = require('../models/Cart');
+    const ChatHistory = require('../models/ChatHistory');
+    const Like = require('../models/Like');
+    const Notification = require('../models/Notification');
+    const Package = require('../models/Package');
+
+    await Promise.all([
+      Cart.deleteMany({ userId }),
+      ChatHistory.deleteMany({ userId }),
+      Like.deleteMany({ userId }),
+      Notification.deleteMany({ userId }),
+      Package.deleteMany({ userId }),
+      User.findByIdAndDelete(userId),
+    ]);
+
+    res.json({ success: true, message: '회원 탈퇴가 완료되었습니다.' });
+  } catch (error) {
+    console.error('[deleteAccount]', error);
+    res.status(500).json({ success: false, message: error.message });
+  }
+};
+
 // @desc    Update user password
 // @route   PUT /api/auth/password
 // @access  Private

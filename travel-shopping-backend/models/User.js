@@ -38,6 +38,28 @@ const userSchema = new mongoose.Schema({
     type: Number,
     default: 0
   },
+  travelPersonality: {
+    type: {
+      type: String,
+      default: null,
+    },
+    scores: {
+      type: mongoose.Schema.Types.Mixed,
+      default: null,
+    },
+    axisScores: {
+      type: mongoose.Schema.Types.Mixed,
+      default: null,
+    },
+    tags: {
+      type: [String],
+      default: [],
+    },
+    analyzedAt: {
+      type: Date,
+      default: null,
+    },
+  },
   createdAt: {
     type: Date,
     default: Date.now

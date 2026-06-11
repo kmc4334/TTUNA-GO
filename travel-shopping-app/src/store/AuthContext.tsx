@@ -3,8 +3,9 @@ import { Platform } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // Expo Go 환경에서 실제 기기 접속을 위해 localhost 대신 컴퓨터의 로컬 IP를 사용합니다.
-// 환경에 따라 192.168.x.x 또는 172.x.x.x 주소로 변경될 수 있습니다.
-export const API_BASE = 'http://172.28.4.155:5000/api';
+// .env 파일의 EXPO_PUBLIC_API_BASE_URL 값을 사용합니다. (예: http://192.168.x.x:5000/api)
+// IP가 바뀌면 .env 파일만 수정하세요.
+export const API_BASE = process.env.EXPO_PUBLIC_API_BASE_URL || 'http://localhost:5000/api';
 const API_URL = `${API_BASE}/auth`;
 
 interface AuthContextType {

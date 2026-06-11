@@ -28,6 +28,8 @@ import { ChangeNameScreen } from '../screens/ChangeNameScreen';
 import { ChangeEmailScreen } from '../screens/ChangeEmailScreen';
 import { ChangePasswordScreen } from '../screens/ChangePasswordScreen';
 import { PathFindingScreen } from '../screens/PathFindingScreen';
+import { PersonalityQuizScreen } from '../screens/PersonalityQuizScreen';
+import { PersonalityResultScreen } from '../screens/PersonalityResultScreen';
 import { Colors } from '../theme/colors';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -57,6 +59,8 @@ export const AppNavigator = () => {
           <>
             <Stack.Screen name="ProfileSetup" component={ProfileSetupScreen} />
             <Stack.Screen name="InterestSelection" component={InterestSelectionScreen} />
+            <Stack.Screen name={"PersonalityQuiz" as any} component={PersonalityQuizScreen} />
+            <Stack.Screen name={"PersonalityResult" as any} component={PersonalityResultScreen} />
             <Stack.Screen name="TravelPreferences" component={TravelPreferencesScreen} />
             <Stack.Screen name={"ResultPreview" as keyof RootStackParamList} component={ResultPreviewScreen} />
             <Stack.Screen name="AIReview" component={AIReviewScreen} />
@@ -71,6 +75,8 @@ export const AppNavigator = () => {
             <Stack.Screen name="Map" component={MapScreen} />
             <Stack.Screen name="TravelPreferences" component={TravelPreferencesScreen} />
             <Stack.Screen name="InterestSelection" component={InterestSelectionScreen} />
+            <Stack.Screen name={"PersonalityQuiz" as any} component={PersonalityQuizScreen} />
+            <Stack.Screen name={"PersonalityResult" as any} component={PersonalityResultScreen} />
             <Stack.Screen name={"ResultPreview" as keyof RootStackParamList} component={ResultPreviewScreen} />
             <Stack.Screen name="Concierge" component={ConciergeScreen} />
             <Stack.Screen name="CreatePackage" component={CreatePackageScreen} />

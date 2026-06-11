@@ -27,7 +27,8 @@ export const InterestSelectionScreen = () => {
   };
 
   const handleNext = () => {
-    navigation.navigate('TravelPreferences' as never);
+    // 관심사 선택 후 성향 퀴즈로 이동
+    navigation.navigate('PersonalityQuiz' as never);
   };
 
   const isNextEnabled = selectedInterests.length >= 3;
